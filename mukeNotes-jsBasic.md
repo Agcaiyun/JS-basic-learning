@@ -126,97 +126,13 @@
     * 获取元素的 ```class``` 属性
     * 为网页内的某个元素指定一个``` css ```样式来更改该元素的外观
 
+### DOM自定义属性 getAttribute/setAttribute/removeAttribute
 
-
-**遗留问题**(根据我的想法应该如何去实现)
-```
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
-<title>javascript</title>
-<style type="text/css">
-body{font-size:12px;}
-#txt{
-    height:400px;
-    width:600px;
-	border:#333 solid 1px;
-	padding:5px;}
-p{
-	line-height:18px;
-	text-indent:2em;}
-</style>
-<script>
-var obj = document.getElementById("txt");
-var colorA = obj.color;
-var wA = obj.width;
-var hA = obj.height;
-var dispalyA = obj.display;
-</script>
-</head>
-<body class="all">
-  <h2 id="con">JavaScript课程</H2>
-  <div id="txt"> 
-     <h5>JavaScript为网页添加动态效果并实现与用户交互的功能。</h5>
-        <p>1. JavaScript入门篇，让不懂JS的你，快速了解JS。</p>
-        <p>2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。</p>
-        <p>3. 学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。</p>
-  </div>
-  <form>
-  <!--当点击相应按钮，执行相应操作，为按钮添加相应事件-->
-    <input type="button" value="改变颜色" onclick='changeColor() '>  
-    <input type="button" value="改变宽高" onclick="changeWH()">
-    <input type="button" value="隐藏内容" onclick="displayNone()" >
-    <input type="button" value="显示内容" onclick="displayBlock()" >
-    <input type="button" value="取消设置" onclick="abore()">
-  </form>
-  <script type="text/javascript">
-//定义"改变颜色"的函数
-
-
-function changeColor(){
-    var color = document.getElementById('con');
-    color.style.color = 'red';
-}
-
-//定义"改变宽高"的函数
-function changeWH(){
-    var WH = document.getElementById("txt");
-    WH.style.width = 1000 + "px";
-    WH.style.height = 500 + "px";
-    WH.style.backgroundColor = "skyblue";
-    WH.style.overflow="hidden";
-}
-
-//定义"隐藏内容"的函数
-function displayNone(){
-var none = document.getElementById("txt");
-none.style.display="none";
-}
-//定义"显示内容"的函数
-function displayBlock(){
-    var block = document.getElementById("txt");
-    block.style.display = "block";
-}
-
-//定义"取消设置"的函数
-function abore(){
-    var txtObj = document.getElementById("txt");
-    var isAbore = confirm("确定取消设置吗？");
-    if(isAbore){
-        var txtO = getElementById("txt");
-        txtO.color = colorA;
-        txtO.width = wA;
-        txtO.height = hA;
-        txtO.display = displayA;
-       
-       //txtObj.removeAttribute("style");
-        
-    }
-}
-
-
-  </script>
-</body>
-</html>
-```
+* 函数语法 
+    * ```object.attributes```                 : 属性返回包含被选中的节点属性的 NamedNodeMap
+    * ```object.getAttribute(name)```         : 方法通过名称获取属性的值
+    * ```object.setAttribute(name,value)```   : 方法创建或改变某个新属性
+    * ```object.removeAttribute(name) ```     : 方法通过名称删除属性的值
+        * ``` removeAttribute()``` 与 ```removeAttributeNode()```  方法的差异是：
+            * ```removeAttributeNode() ``` 方法删除指定的 ```Attr``` 对象，而``` removeAttribute() ```方法删除具有指定名称的属性，结果是相同的
+            * ``` removeAttribute()``` 这个方法不返回值，而 ```removeAttributeNode()``` 方法返回被删除的属性，以``` Attr ```对象的形式
