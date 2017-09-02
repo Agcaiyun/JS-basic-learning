@@ -284,3 +284,49 @@ function validB(){
     * ```pixelDepth```    :   用户浏览器表示的颜色位数,通常为``` 32 ```位(每像素的位数)(```IE```不支持此属性)
     * ```height  ```      :   屏幕的高度,单位像素
     * ```width ```        :   屏幕的宽度,单位像素
+
+## DOM 对象
+
+**setAttribute()**
+* setAttribute() 方法增加一个特定名称和值的新属性,或者把一个现有的属性设定为指定的值
+* 语法 : elementNode.setAttribute(name,value)
+* 参数说明
+    * name : 要设置的属性名
+    * value : 要设置的属性值
+* 注意
+    * 把指定的属性设置为指定的属性
+    * 如果指定名称的属性不存在,则该方法创建一个新属性
+
+**节点属性**
+* nodeName 属性 : 节点的名称,是**只读**的
+    *  元素节点的 nodeName 与标签名相同
+    *  属性节点的 nodeName 是属性的名称
+    *  文本节点的 nodeName 永远是 #text
+    *  文档节点的 nodeName 永远是 #document
+* nodeValue 属性 : 节点的值
+    *  元素节点的 nodeValue 是 undefined 或 null
+    *  文本节点的 nodeValue 是文本自身
+    *  属性节点的 nodeValue 是属性的值
+* nodeType 属性 : 节点的类型,是**只读**的.一下常用的几种节点类型
+    元素类型    节点类型
+    元素          1
+    属性          2
+    文本          3
+    注释          8
+    文档          9
+
+
+**childNodes 访问子节点**
+* 访问选定元素节点下的所有子节点的列表,返回的值可以看作是一个数组,他具有 length 属性
+* 语法 : elementNode.childNodes
+* 注意 : 如果选定的节点没有子节点,则该属性返回不包含节点的 NodeLise
+* 有很强的兼容性问题(虽然所有主流浏览器都支持 childNodes 属性)
+* [参考资料](http://www.imooc.com/code/1590)
+
+**firstChild / lastChild**
+* firstChild 属性返回 "childNodes" 数组的第一个子节点.如果选定的节点没有子节点,则该属性返回 null
+* 语法 : node.firstChild
+    * 与 elementNode.childNodes[0]  是同样的效果
+* lastChild 属性返回"childNodes"数组的最后一个子节点.如果选定的节点没有子节点，则该属性返回 null
+* 语法 : node.lastChild
+    * 与elementNode.childNodes[elementNode.childNodes.length-1]是同样的效果
