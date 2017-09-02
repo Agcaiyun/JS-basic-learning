@@ -95,7 +95,52 @@ www,imooc
 
 **substr() 提取指定数目的字符**
 * substr() 方法从字符串中提取从 startPos 位置开始的指定数目的字符串
+* substr() 方法只是提取符合要求的字符串 作为返回值返回,并不会改变原来的字符串
 * 语法: stringObject.substr(startPos,length)
 * 参数说明:
     * startPos : 必需.要提取的子串的起始位置.必需是数值
     * length : 可选.提取字符串的长度.如果省略,则返回从 stringObject 的开始位置startPos 到 startObject 的结尾的字符
+* **注意**
+    * 如果参数 startPos 为负数,则从字符串的尾部开始计算位置.-1 指字符串的最后一个字符,-2 表示倒数第二个字符
+    * 如果 startPos 为负数,且绝对值大于字符串长度,startPos 为 0 
+
+**Math 对象**
+* Math 对象是一个固有的对象,无需创建它,直接把 Math 作为对象使用就可以调用其所有属性和方法.这是它与 Date String 对象的区别 
+* 使用 Math 的属性和方法的语法:
+    * var pi_value = Math.PI;
+    * var sqrt_value = Math.sqrt(15);
+* [参考资料](http://www.w3school.com.cn/jsref/jsref_obj_math.asp)
+
+**round**
+* round()  方法可以把一个数字四舍五入为最接近的整数
+* 语法: Math.round(x)  把一二数字四舍五入为最接近的整数
+
+**random()**
+* random() 方法可返回介于 0 ~ 1 (大于等于0 ,但小于1) 之间的一个随机数
+* 语法: Math.random()
+    * 返回一个大于或等于 0 但小于 1 的符号为**正** 的数字值
+* 扩大返回的随机数的范围
+    * Math.random() * 需要扩大的倍数
+
+**Array 数组对象**
+* 数组对象是一个对象的集合,里面的对象可以是不同类型的.数组的每一个成员都有一个"下标",用来表示它在数组中的位置,是从零开始的.
+* 数组定义的方法
+    * 定义一个空数组 : var myArrayName = new Array();
+    * 定义时指定有几个空元素的数组 : var myArray = new Array(n);
+    * 定义数组的时候,直接初始化数据 : var myArray = [<元素1>,<元素2>,<元素3> ...];
+        * 比如:定义数组并赋值 : var myArray = [2,3,4];
+
+**concat() 数组链接**
+* concat() 方法用于链接两个或者多个数组.此方法返回一个新的数组,**不改变**原来的数组.
+* 语法 : arrayObject.concat(array1,array2,...,arrayN)
+**注意** : 该方法只是将链接之后的结果作为返回值进行返回,但是**并不改变**原来的数组
+
+**join()**
+* join() 方法用于将数组中的所有元素放入一个字符串中.元素是通过指定的分隔符进行分隔(分隔符就是需要被传入的这个方法的参数)
+* 语法 : arrayObject.join(分隔符);
+* 这个方法只是返回分隔之后的字符串,不影响数组原来的内容.
+
+**reverse()**
+* reverse() 方法用于颠倒数组中元素的位置
+* 语法: arrayObject.reverse()
+* **注意** : 这个方法**会改变**原来的数组,而不是创建新的数组(比改变原数组)作为返回值.
