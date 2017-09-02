@@ -65,7 +65,7 @@ document.write("推迟一个小时时间:" + mydate);
 * 如果要检索的字符串没有出现,则该方法返回 -1
 
 **split()  字符串分割**
-* split() 方法将**字符串** 分割为 **数组**,并 返回此数组
+* split() 方法将**字符串** 分割为 **数组**,并 **返回此数组**,原来的 字符串并不会受到任何影响
 * 语法: stringObject.split(separator,limit)
 * 参数说明:
     * separator : 必需.从该参数指定的地方开始分割 stringObject
@@ -81,3 +81,21 @@ document.write(mystr.split(".") , 2 ) + "<br>" );
 www,imooc,com
 www,imooc
 ```
+
+**substring() 提取字符串**
+* substring() 方法用于提取字符串中 介于 两个指定下标之间的字符.(将提取到的字符作为返回值返回,原来的字符串并未被改变  )
+* 语法: stringObject.substring(startPos,stopPos)
+* 参数说明:
+    * startPos: 必需.一个非负的整数,表示开始位置
+    * stopPos: 可选.一个非负的整数,表示结束位置.如果省略该参数,那么返回的子串会一直到字符串对象的结尾
+* 注意
+    * substring(startPos,stopPos)  其中,截取范围为:[startPos,stopPos)   (表示包含开始下标的字符,不包含结束下标的字符)
+    * 如果参数 startPos 与 stopPos 相等,那么该方法返回的值就是一个空串(即长度为 0 的字符串)
+    * 如果 startPos 比 stopPos 大,那么该方法在提取子串之前会先交换这两个参数
+
+**substr() 提取指定数目的字符**
+* substr() 方法从字符串中提取从 startPos 位置开始的指定数目的字符串
+* 语法: stringObject.substr(startPos,length)
+* 参数说明:
+    * startPos : 必需.要提取的子串的起始位置.必需是数值
+    * length : 可选.提取字符串的长度.如果省略,则返回从 stringObject 的开始位置startPos 到 startObject 的结尾的字符
