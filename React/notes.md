@@ -1,3 +1,8 @@
+<script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+
+
 * React 与 TypeScript 的区别
     * React 不是一个 MVC 框架,它是构建易于可重复调用的 WEB 组件,侧重于 UI ,也就是 view 层
     * React 是单向的从数据到视图的渲染,非双向数据绑定
