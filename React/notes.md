@@ -10,3 +10,7 @@
 * create-react-app 
     * create-react-app 是来自 Facebook ,通过该命令我们无需配置就能快速构建 react 开发环境
     * create-react-app 自动创建的项目是基于 webpack + ES5
+*  创建项目
+    * create-react-app  my-app(name)
+    * cd my-app/
+    * npm start
