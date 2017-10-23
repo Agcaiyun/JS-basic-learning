@@ -7,3 +7,6 @@
     * react.min.js          React 的核心库
     * react-dom.min.js      提供与 DOM 相关的功能
     * babel.min.js          babel 可以将 ES6 代码转换为 ES5 代码，这样我们就能在目前不支持 ES6 的浏览器上执行 react 代码.Babel 内嵌了对 JSX 的支持.通过将 Babel 和 babel-sublime 包(package) 一同使用可以让源码的语法渲染上升到一个全新的水平.
+* create-react-app 
+    * create-react-app 是来自 Facebook ,通过该命令我们无需配置就能快速构建 react 开发环境
+    * create-react-app 自动创建的项目是基于 webpack + ES5
