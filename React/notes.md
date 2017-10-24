@@ -19,3 +19,5 @@
     * create-react-app  my-app(name)
     * cd my-app/
     * npm start
+* 原生 HTML 元素名以小写字母开头,而自定义的 react 类名 以大写字母开头,比如:HelloMessage 不能写成 helloMessage
+* 在添加属性时, class 属性需要写成 className ,for 属性需要写成 htmlFor , 这是因为 class 和 for 时 JS 的保留字
